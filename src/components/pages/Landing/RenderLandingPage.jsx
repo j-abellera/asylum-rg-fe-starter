@@ -39,7 +39,7 @@ function RenderLandingPage(props) {
             src={GrantRatesByOfficeImg}
             alt="graph-rates-by-office"
           />
-          <h2>Search Grant Rates By Office</h2>
+          <p>Search Grant Rates By Office</p>
         </div>
         <div className="graph-section">
           <img
@@ -47,7 +47,7 @@ function RenderLandingPage(props) {
             src={GrantRatesByNationalityImg}
             alt="grant-rates-by-nationality"
           />
-          <h2>Search Grant Rates By Nationality</h2>
+          <p>Search Grant Rates By Nationality</p>
         </div>
         <div className="graph-section">
           <img
@@ -55,7 +55,7 @@ function RenderLandingPage(props) {
             src={GrantRatesOverTimeImg}
             alt="grant rates over times"
           />
-          <h2>Search Grant Rates Over Time</h2>
+          <p>Search Grant Rates Over Time</p>
         </div>
       </div>
 
@@ -94,7 +94,58 @@ function RenderLandingPage(props) {
       </div>
       <div>
         {/* Bottom Section: Add code here for the graphs section for your first ticket */}
-        {/* <div className="bottom-section">*/}
+        <div className="bottom-section">
+          <div className="bottom-heading">
+            <h2>Systemic Disparity Insights</h2>
+          </div>
+          <div className="bottom-tri">
+            <div className="tri-section">
+              <div className="tri-heading">
+                <p>36%</p>
+              </div>
+              <div className="tri-desc">
+                <p>
+                  By the end of the Trump administration, the average asylum
+                  office grant rate had fallen 36 percent from and average of 44
+                  percent on fiscal year 2016 to 28 percent in fiscal year 2020.
+                </p>
+              </div>
+            </div>
+            <div className="tri-section">
+              <div className="tri-heading">
+                <p>5%</p>
+              </div>
+              <div className="tri-desc">
+                <p>
+                  The New York asylum office grant rate dropped to 5 percent in
+                  fiscal year 2020.
+                </p>
+              </div>
+            </div>
+            <div className="tri-section">
+              <div className="tri-heading">
+                <p>6x Lower</p>
+              </div>
+              <div className="tri-desc">
+                <p>
+                  Between fiscal year 2017 and 2020, the New York asylum
+                  office's average grant rate was six times lower than the San
+                  Fransisco asylum office.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="read-more-btm-btn-container">
+            <Button
+              type="default"
+              style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+              onClick={() => history.push('/graphs')}
+            >
+              Read More
+            </Button>
+          </div>
+        </div>
         <p onClick={() => scrollToTop()} className="back-to-top">
           Back To Top ^
         </p>
