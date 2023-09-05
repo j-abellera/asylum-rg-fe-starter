@@ -34,40 +34,28 @@ function RenderLandingPage(props) {
       {/* Graphs Section: Add code here for the graphs section for your first ticket */}
       <div className="graphs-section">
         <div className="graph-section">
-          <div className="graph-section-img">
-            <img
-              className="graph-img"
-              src={GrantRatesByOfficeImg}
-              alt="graph-rates-by-office"
-            />
-          </div>
-          <div>
-            <h2>Search Grant Rates By Office</h2>
-          </div>
+          <img
+            className="graph-img"
+            src={GrantRatesByOfficeImg}
+            alt="graph-rates-by-office"
+          />
+          <h2>Search Grant Rates By Office</h2>
         </div>
         <div className="graph-section">
-          <div className="graph-section-img">
-            <img
-              className="graph-img"
-              src={GrantRatesByNationalityImg}
-              alt="grant-rates-by-nationality"
-            />
-          </div>
-          <div>
-            <h2>Search Grant Rates By Nationality</h2>
-          </div>
+          <img
+            className="graph-img"
+            src={GrantRatesByNationalityImg}
+            alt="grant-rates-by-nationality"
+          />
+          <h2>Search Grant Rates By Nationality</h2>
         </div>
         <div className="graph-section">
-          <div className="graph-section-img">
-            <img
-              className="graph-img"
-              src={GrantRatesOverTimeImg}
-              alt="grant rates over times"
-            />
-          </div>
-          <div>
-            <h2>Search Grant Rates Over Time</h2>
-          </div>
+          <img
+            className="graph-img"
+            src={GrantRatesOverTimeImg}
+            alt="grant rates over times"
+          />
+          <h2>Search Grant Rates Over Time</h2>
         </div>
       </div>
 
@@ -78,6 +66,13 @@ function RenderLandingPage(props) {
           onClick={() => history.push('/graphs')}
         >
           View the Data
+        </Button>
+        <Button
+          type="default"
+          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+          onClick={() => history.push('/graphs')}
+        >
+          Download the Data
         </Button>
       </div>
 
