@@ -4,9 +4,17 @@ import { Link } from 'react-router-dom';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
 
+import { useAuth0 } from '@auth0/auth0-react';
+import Login from '../pages/Auth/Logout';
+import Logout from '../pages/Auth/Login';
+
 const { primary_accent_color } = colors;
 
 function HeaderContent() {
+  const { isAuthenticated } = useAuth0();
+
+  console.log(isAuthenticated);
+
   return (
     <div
       style={{
@@ -28,12 +36,16 @@ function HeaderContent() {
         <Link to="/graphs" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Graphs
         </Link>
-        <Link to="/graphs" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
-          Profile
-        </Link>
-        <Link to="/graphs" style={{ color: '#E2F0F7' }}>
-          Login/Logout
-        </Link>
+        {isAuthenticated === true && (
+          <Link
+            to="/profile"
+            style={{ color: '#E2F0F7', paddingRight: '75px' }}
+          >
+            Profile
+          </Link>
+        )}
+        {isAuthenticated && <Login />}
+        {!isAuthenticated && <Logout />}
       </div>
     </div>
   );
